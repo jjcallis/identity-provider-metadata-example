@@ -1,0 +1,24 @@
+<md:EntitiesDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:SAML:2.0:metadata saml-schema-metadata-2.0.xsd">
+<md:EntityDescriptor entityID="https://identity-provider.co.uk/v2/SAML/SamlResponse.aspx">
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" WantAuthnRequestsSigned="true">
+<md:KeyDescriptor use="signing">
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>--- BASE 64 CERTIFICATE -- </ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://identity-provider/v2/SAML/ProcessAuthRequest.aspx"/>
+</md:IDPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="en">identity-provider IdP</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="en">identity-provider IdP</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="en">https://www.identity-provider.co.uk/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:SurName>identity-provider IdP Support</md:SurName>
+<md:EmailAddress>mailto:saml-support@identity-provider.com</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+</md:EntitiesDescriptor>
